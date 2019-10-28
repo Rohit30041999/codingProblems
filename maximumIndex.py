@@ -27,7 +27,7 @@ Explanation:
 Testcase 1:  In the given array A[1] < A[7] satisfying the required condition(A[i] <= A[j]) thus giving the maximum difference of j - i which is 6(7-1).
 """
 
-#SOLUTION:>>
+#SOLUTION:>> time complexity : O(n^2) (not efficient)
 
 def maximumIndex(nums) :
   maxIndex = -(pow(2, 31))
