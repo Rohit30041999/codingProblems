@@ -83,6 +83,9 @@ Rules:
     Row = int(input("Enter the row: ").strip())
     Col = int(input("Enter the column: ").strip())
     if board[Row][Col] == '_': board[Row][Col] = currentPlayer
+    elif board[Row][Col] != '_':
+      print("This place is occupied. Try any other place.")
+      continue
     if player1 == checkBoard(board) or player2 == checkBoard(board):
       winner = checkBoard(board)
       if winner == player1: print(f"The Game is over!!! {Player1} is the winner.")
