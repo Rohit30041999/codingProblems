@@ -28,14 +28,14 @@ def maxProduct(l):
         if ph < (nh * i):
           ph = (nh * i)
       return(ph)
-  elif len(p) == 2:
-     n.sort()
-     nh = n[0] * n[1]
-     ph = 0
-     for i in p:
-       if ph < (nh * i):
-         ph = (nh * i)
-     return(ph)
+    elif len(p) == 2:
+      n.sort()
+      nh = n[0] * n[1]
+      ph = 0
+      for i in p:
+        if ph < (nh * i):
+          ph = (nh * i)
+      return(ph)
 
 l = list(map(int, input().strip().split()))
 print(maxProduct(l))
