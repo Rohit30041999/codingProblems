@@ -20,13 +20,14 @@ class MaxSquare {
     int[][] clone = matrix.clone();
     for(int i = 0; i < matrix.length; i++) {
       for (int j = 0; j < matrix[0].length; j++) {
-        if (i > 0 && j > 0) {
+        if (i > 0 && j > 0 && clone[i][j] != 0) {
           int minPrev = Math.min(matrix[i][j - 1], Math.min(matrix[i - 1][j], matrix[i - 1][j - 1]));
           clone[i][j] = clone[i][j] + minPrev;
           if (lengthOfSq < clone[i][j]) {
             lengthOfSq = clone[i][j];
           }
         }
+        if ((i > 0 && j == 0 && clone[i][j] == 1) || (i == 0 && j > 0 && clone[i][j] == 1)) lengthOfSq = clone[i][j];
       }
     }
     return lengthOfSq;
