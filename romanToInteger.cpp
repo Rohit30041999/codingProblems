@@ -36,7 +36,7 @@ int main() {
     hashMap[a[i]] = initialValue;
   }
   
-  string s = "XL";
+  string s = "CL";
   
   if(s.size() == 0) {
     cout << 0 << endl;
@@ -45,12 +45,15 @@ int main() {
   } else {
     int n = s.size();
     int res = hashMap[s[n-1]];
+    int store = hashMap[s[n-1]];
     
     for(int i=(n-2); i>=0; i--) {
-      if(res > hashMap[s[i]]) {
+      if(store > hashMap[s[i]]) {
         res = res - hashMap[s[i]];
+        store = hashMap[s[i]];
       } else {
         res = res + hashMap[s[i]];
+        store = hashMap[s[i]];
       }
     }
 
