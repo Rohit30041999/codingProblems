@@ -1,6 +1,6 @@
-# (Source --> LeetCode)
+// (Source --> LeetCode)
 
-# Solution: (Method - I : Recursion)
+// Solution: (Method - I : Recursion)
 
 /**
  * Definition for a binary tree node.
